@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DN23MHNYG7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DN23MHNYG7');
-</script>
 
 
     <meta charset="UTF-8">
@@ -60,10 +51,10 @@
 </script>
 
 
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="critical.css">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-    <link rel="preload" as="style" href="style.css">
+    <link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="critical.min.css">
+    <noscript><link rel="stylesheet" href="style.min.css"></noscript>
+    <link rel="preload" as="style" href="style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -135,11 +126,11 @@
                         </span>
                     </a>
                 </div>
-                <div class="menu-toggle">
+                <button class="menu-toggle" aria-label="Otwórz menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
@@ -174,7 +165,7 @@
 
     <section class="service-boxes">
         <div class="container">
-            <div class="box blue-box" data-aos-custom="fade-right">
+            <div class="box blue-box" role="article" data-aos-custom="fade-right">
                 <div class="box-icon"><i class="fas fa-car"></i></div>
                 <div class="box-content">
                     <h3>SKUP SAMOCHODÓW</h3>
@@ -182,7 +173,7 @@
                     <a href="skup-samochodow.html" class="btn-outline">SKUP SAMOCHODÓW</a>
                 </div>
             </div>
-            <div class="box orange-box" data-aos-custom="fade-left">
+            <div class="box orange-box" role="article" data-aos-custom="fade-left">
                 <div class="box-icon"><i class="fas fa-truck-moving"></i></div>
                 <div class="box-content">
                     <h3>POMOC DROGOWA 24/7</h3>
@@ -201,19 +192,19 @@
         <div class="container">
             <h2 class="section-title" data-aos-custom="fade-up">DLACZEGO WARTO NAS WYBRAĆ?</h2>
             <div class="benefits-grid">
-                <div class="benefit-item" data-aos-custom="zoom-in" data-aos-delay="100">
+                <div class="benefit-item" role="listitem" data-aos-custom="zoom-in" data-aos-delay="100">
                     <i class="fas fa-award"></i>
                     <h4>GWARANCJA UCZCIWEJ CENY</h4>
                 </div>
-                <div class="benefit-item" data-aos-custom="zoom-in" data-aos-delay="200">
+                <div class="benefit-item" role="listitem" data-aos-custom="zoom-in" data-aos-delay="200">
                     <i class="fas fa-stopwatch"></i>
                     <h4>SZYBKI DOJAZD GRATIS!</h4>
                 </div>
-                <div class="benefit-item" data-aos-custom="zoom-in" data-aos-delay="300">
+                <div class="benefit-item" role="listitem" data-aos-custom="zoom-in" data-aos-delay="300">
                     <i class="fas fa-money-bill-wave"></i>
                     <h4>GOTÓWKA DO RĘKI</h4>
                 </div>
-                <div class="benefit-item" data-aos-custom="zoom-in" data-aos-delay="400">
+                <div class="benefit-item" role="listitem" data-aos-custom="zoom-in" data-aos-delay="400">
                     <i class="fas fa-truck-monster"></i>
                     <h4>PROFESJONALNA LAWETA 24/7</h4>
                 </div>
@@ -255,17 +246,17 @@
         <div class="container">
             <h2 class="section-title" data-aos-custom="fade-up">JAK TO DZIAŁA?</h2>
             <div class="steps-grid">
-                <div class="step" data-aos-custom="fade-up" data-aos-delay="100">
+                <div class="step" role="listitem" data-aos-custom="fade-up" data-aos-delay="100">
                     <div class="step-num">1</div>
                     <h4>Wycena online</h4>
                     <p>Wypełnij formularz lub zadzwoń do nas. Podaj podstawowe dane o samochodzie.</p>
                 </div>
-                <div class="step" data-aos-custom="fade-up" data-aos-delay="200">
+                <div class="step" role="listitem" data-aos-custom="fade-up" data-aos-delay="200">
                     <div class="step-num">2</div>
                     <h4>Przyjazd do klienta</h4>
                     <p>Dojedziemy we wskazane miejsce w Częstochowie i na Śląsku w najkrótszym możliwym czasie.</p>
                 </div>
-                <div class="step" data-aos-custom="fade-up" data-aos-delay="300">
+                <div class="step" role="listitem" data-aos-custom="fade-up" data-aos-delay="300">
                     <div class="step-num">3</div>
                     <h4>Gotówka do ręki</h4>
                     <p>Po krótkich oględzinach podpisujemy umowę i wypłacamy pieniądze natychmiast.</p>
@@ -324,8 +315,8 @@
                     </div>
                 </div>
                 <div class="slider-pagination"></div>
-                <button class="slider-nav slider-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
-                <button class="slider-nav slider-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-nav slider-next" aria-label="Następny slajd"><i class="fas fa-chevron-right"></i></button>
+                <button class="slider-nav slider-prev" aria-label="Poprzedni slajd"><i class="fas fa-chevron-left"></i></button>
             </div>
         </div>
     </section>
@@ -334,7 +325,7 @@
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">CO MÓWIĄ O NAS KLIENCI</h2>
-            <div class="custom-slider testimonials-slider">
+            <div class="custom-slider testimonials-slider" role="region" aria-label="Opinie klientów">
                 <div class="slider-track">
                     <div class="slider-item">
                         <div class="testimonial">
@@ -414,6 +405,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
 </body>
 </html>

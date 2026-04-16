@@ -240,7 +240,7 @@ function initCustomSlider(sliderSelector) {
             const dot = document.createElement('button');
             dot.classList.add('slider-dot');
             if (i === currentIndex) dot.classList.add('active');
-            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.setAttribute('aria-label', `Idź do slajdu ${i + 1}`);
             dot.addEventListener('click', () => {
                 stopAutoplay();
                 scrollTo(i);
@@ -325,6 +325,33 @@ function initCustomSlider(sliderSelector) {
     slider.addEventListener('touchstart', stopAutoplay, { passive: true });
     slider.addEventListener('touchend', startAutoplay, { passive: true });
 }
+
+// 📌 Google Tag Manager Delay
+function initGTM() {
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-DN23MHNYG7";
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DN23MHNYG7');
+}
+
+let gtmLoaded = false;
+function loadGTMOnInteraction() {
+    if (gtmLoaded) return;
+    gtmLoaded = true;
+    initGTM();
+    ['touchstart', 'mousemove', 'scroll', 'keydown'].forEach(event => {
+        window.removeEventListener(event, loadGTMOnInteraction);
+    });
+}
+
+['touchstart', 'mousemove', 'scroll', 'keydown'].forEach(event => {
+    window.addEventListener(event, loadGTMOnInteraction, { passive: true });
+});
 
 // Custom Animation Logic (AOS replacement)
 function initCustomAOS() {
