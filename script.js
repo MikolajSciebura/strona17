@@ -222,9 +222,19 @@ function initCustomSlider(sliderSelector) {
 
     let currentIndex = 0;
     let autoplayInterval;
+    let trackWidth = 0;
+    let itemWidth = 0;
+    let itemOffsets = [];
+
+    // Cache dimensions to avoid forced reflows
+    function updateDimensions() {
+        trackWidth = track.offsetWidth;
+        itemWidth = items[0].offsetWidth;
+        itemOffsets = Array.from(items).map(item => item.offsetLeft);
+    }
 
     function getItemsInView() {
-        return Math.round(track.offsetWidth / items[0].offsetWidth);
+        return Math.round(trackWidth / itemWidth);
     }
 
     function getMaxIndex() {
@@ -264,7 +274,7 @@ function initCustomSlider(sliderSelector) {
         if (index > maxIndex) index = 0;
 
         currentIndex = index;
-        const scrollAmount = items[currentIndex].offsetLeft;
+        const scrollAmount = itemOffsets[currentIndex] || 0;
         track.scrollTo({
             left: scrollAmount,
             behavior: 'smooth'
@@ -292,7 +302,7 @@ function initCustomSlider(sliderSelector) {
     track.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-            const index = Math.round(track.scrollLeft / items[0].offsetWidth);
+            const index = Math.round(track.scrollLeft / itemWidth);
             const maxIndex = getMaxIndex();
             const newIndex = Math.min(index, maxIndex);
             if (newIndex !== currentIndex) {
@@ -312,13 +322,19 @@ function initCustomSlider(sliderSelector) {
         clearInterval(autoplayInterval);
     }
 
+    updateDimensions();
     createPagination();
     startAutoplay();
 
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-        createPagination();
-        scrollTo(currentIndex);
-    });
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateDimensions();
+            createPagination();
+            scrollTo(currentIndex);
+        }, 200);
+    }, { passive: true });
 
     slider.addEventListener('mouseenter', stopAutoplay);
     slider.addEventListener('mouseleave', startAutoplay);
