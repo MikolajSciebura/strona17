@@ -705,7 +705,7 @@ footer h3 {
 .brands-flex span {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.2);
+    color: #8a8a8a; /* Increased contrast for better accessibility */
     text-transform: uppercase;
 }
 
