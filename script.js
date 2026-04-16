@@ -215,9 +215,6 @@ function initCustomSlider(sliderSelector) {
     const track = slider.querySelector('.slider-track');
     const items = slider.querySelectorAll('.slider-item');
     const pagination = slider.querySelector('.slider-pagination');
-    const prevBtn = slider.querySelector('.slider-prev');
-    const nextBtn = slider.querySelector('.slider-next');
-
     if (!track || items.length === 0) return;
 
     let currentIndex = 0;
@@ -282,20 +279,6 @@ function initCustomSlider(sliderSelector) {
         updatePagination(currentIndex);
     }
 
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            stopAutoplay();
-            scrollTo(currentIndex - 1);
-            startAutoplay();
-        });
-    }
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            stopAutoplay();
-            scrollTo(currentIndex + 1);
-            startAutoplay();
-        });
-    }
 
     // Update index on scroll
     let scrollTimeout;
