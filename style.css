@@ -24,6 +24,16 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9800;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -100,8 +110,8 @@ nav a {
     text-decoration: none;
     color: var(--text-light);
     font-weight: 700;
-    font-size: 0.85rem; /* Slightly smaller font */
-    padding: 8px 10px; /* More compact padding */
+    font-size: 0.95rem;
+    padding: 12px 15px; display: inline-flex; align-items: center; min-height: 48px;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1643,7 +1653,7 @@ footer h3 {
         font-size: 1.25rem;
         font-family: 'Oswald', sans-serif;
         display: block;
-        padding: 12px 0;
+        padding: 15px 0; min-height: 52px; display: flex; align-items: center; justify-content: center;
         letter-spacing: 2px;
         color: white;
         text-transform: uppercase;
@@ -1904,8 +1914,8 @@ footer h3 {
 }
 
 .slider-dot {
-    width: 32px; /* Increased touch target size */
-    height: 32px;
+    width: 48px; /* Standard touch target size */
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
