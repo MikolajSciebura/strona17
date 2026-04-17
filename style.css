@@ -203,7 +203,7 @@ button:focus, a.btn-call:focus, a.btn-hero-call:focus, a.btn-outline:focus {
 }
 
 .menu-toggle:hover span {
-    background: white;
+    background: #000;
 }
 
 .menu-toggle span {
@@ -221,11 +221,11 @@ button:focus, a.btn-call:focus, a.btn-hero-call:focus, a.btn-outline:focus {
 
 .menu-toggle.active {
     background: rgba(255, 255, 255, 0.1);
-    border-color: white;
+    border-color: var(--primary-color);
 }
 
 .menu-toggle.active span {
-    background: white;
+    background: var(--primary-color);
 }
 
 .menu-toggle.active span:nth-child(1) {

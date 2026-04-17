@@ -12,8 +12,14 @@ def minify_css(css):
 def minify_js(js):
     # Very basic JS minification: remove comments and some whitespace
     # Caution: this is not a full-blown minifier like Terser
-    js = re.sub(r'//.*?\n', '\n', js)
+
+    # Remove block comments
     js = re.sub(r'/\*.*?\*/', '', js, flags=re.DOTALL)
+
+    # Remove line comments, but try to avoid URLs
+    # This looks for // that is not preceded by : (as in http://)
+    js = re.sub(r'(?<!:)\/\/.*?\n', '\n', js)
+
     # This is risky for JS without a proper parser, so let's be conservative
     # Just remove multiple spaces and empty lines
     js = re.sub(r'\n\s*\n', '\n', js)
