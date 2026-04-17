@@ -471,8 +471,9 @@ button:focus, a.btn-call:focus, a.btn-hero-call:focus, a.btn-outline:focus {
     margin-bottom: 20px;
 }
 
-.benefit-item h4 {
-    font-size: 1.1rem;
+.benefit-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 
 /* Recent Buys */
@@ -591,21 +592,30 @@ footer h3 {
 }
 
 .seo-text-block h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     color: var(--primary-color);
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    line-height: 1.2;
 }
 
 .seo-text-block h3 {
-    font-size: 1.6rem;
-    margin-top: 30px;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-top: 40px;
     margin-bottom: 20px;
+    color: var(--text-light);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
 }
 
 .seo-text-block p {
-    margin-bottom: 20px;
-    font-size: 1.05rem;
-    color: #ccc;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.seo-text-block strong {
+    color: var(--primary-color);
 }
 
 .seo-text-block ul {
@@ -614,9 +624,11 @@ footer h3 {
 }
 
 .seo-text-block li {
-    margin-bottom: 10px;
-    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-left: 35px;
     position: relative;
+    font-size: 1.1rem;
+    color: #e0e0e0;
 }
 
 .seo-text-block li::before {
@@ -625,6 +637,7 @@ footer h3 {
     left: 0;
     color: var(--primary-color);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .hero-subtext {
@@ -742,9 +755,10 @@ footer h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.faq-item h4 {
+.faq-item h3 {
     color: var(--primary-color);
     margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 /* Sub-pages Styling ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
@@ -801,7 +815,9 @@ footer h3 {
 }
 
 .check-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
 }
 
 .check-list i {
@@ -903,58 +919,61 @@ footer h3 {
     height: 150px;
 }
 
-/* Valuation Form Styles */
-.hero-form-box {
+/* Form Styles (Unified) */
+.form-card {
     background: var(--accent-color);
-    padding: 30px;
+    padding: 35px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     border: 1px solid rgba(255, 152, 0, 0.2);
 }
 
-.hero-form-box h3 {
+.form-card h2 {
     color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    font-size: 2rem;
+    margin-bottom: 10px;
     text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 .form-subtitle {
     text-align: center;
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #bbb;
+    font-weight: 400;
 }
 
-.hero-form-box .form-group {
-    margin-bottom: 15px;
+.styled-form .form-group {
+    margin-bottom: 18px;
 }
 
-.hero-form-box input,
-.hero-form-box select,
-.hero-form-box textarea {
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 18px;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.1);
     background: rgba(255,255,255,0.05);
     color: white;
-    font-family: inherit;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
-.hero-form-box select option {
-    background: var(--accent-color);
+.styled-form select option {
+    background: var(--bg-dark);
     color: white;
 }
 
-.hero-form-box input:focus,
-.hero-form-box select:focus,
-.hero-form-box textarea:focus {
+.styled-form input:focus,
+.styled-form select:focus,
+.styled-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
     background: rgba(255,255,255,0.1);
-    box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
+    box-shadow: 0 0 15px rgba(245, 124, 0, 0.2);
 }
 
 .checkbox-group label {
@@ -978,8 +997,8 @@ footer h3 {
     accent-color: var(--primary-color);
 }
 
-.hero-form-box textarea {
-    height: 100px;
+.styled-form textarea {
+    height: 120px;
     resize: vertical;
 }
 
