@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DN23MHNYG7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DN23MHNYG7');
-</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Skup Aut, Laweta, Pomoc Drogowa Częstochowa | DAWDAN-CARS</title>
+    <title>Kontakt | Pomoc Drogowa, Laweta i Skup Aut Częstochowa 24h</title>
 
-<meta name="description" content="Skontaktuj się z DAWDAN-CARS. Skup aut, laweta i pomoc drogowa Częstochowa 24h. Zadzwoń po darmową wycenę samochodu lub szybkie holowanie. Zapraszamy!">
+<meta name="description" content="Kontakt z DAWDAN-CARS. Potrzebna pomoc drogowa Częstochowa lub laweta? Chcesz sprzedać auto? Skup aut Częstochowa 24h – zadzwoń i wezwij holowanie już teraz!">
 
 <link rel="canonical" href="https://dawdan-cars.pl/kontakt.html">
 
@@ -38,10 +29,10 @@
 }
 </script>
 
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="critical.css">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-    <link rel="preload" as="style" href="style.css">
+    <link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="critical.min.css">
+    <noscript><link rel="stylesheet" href="style.min.css"></noscript>
+    <link rel="preload" as="style" href="style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -62,6 +53,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicony/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicony/favicon-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicony/favicon-180x180.png">
+    <script src="script.min.js" defer></script>
 </head>
 <body>
     <header>
@@ -78,6 +70,7 @@
                         <li><a href="o-nas.html">O NAS</a></li>
                         <li><a href="skup-samochodow.html">SKUP SAMOCHODÓW</a></li>
                         <li><a href="laweta-pomoc-drogowa.html">POMOC DROGOWA</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
                         <li><a href="kontakt.html">KONTAKT</a></li>
                     </ul>
                     <div class="header-cta mobile-only">
@@ -113,11 +106,11 @@
                         </span>
                     </a>
                 </div>
-                <div class="menu-toggle">
+                <button class="menu-toggle" aria-label="Otwórz menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
@@ -125,8 +118,8 @@
 
     <section class="page-header" style="background: linear-gradient(rgba(11, 19, 43, 0.8), rgba(11, 19, 43, 0.8)), url('tlo.webp');">
         <div class="container">
-            <h1>KONTAKT - DAWDAN-CARS</h1>
-            <p>Jesteśmy do Twojej dyspozycji 24/7 – Częstochowa i cały Śląsk</p>
+            <h1>KONTAKT – POMOC DROGOWA & SKUP AUT CZĘSTOCHOWA</h1>
+            <p>Niezawodna pomoc drogowa, laweta i skup samochodów Częstochowa 24h</p>
         </div>
     </section>
 
@@ -135,8 +128,10 @@
             <div class="contact-grid">
                 
                 <div class="contact-form-section" data-aos-custom="fade-right">
-                    <h3>WYŚLIJ WIADOMOŚĆ</h3>
-                    <form id="contact-form" class="full-contact-form" method="post" action="send.php">
+                    <div class="form-card">
+                        <h2>WYŚLIJ WIADOMOŚĆ</h2>
+                        <p class="form-subtitle">Skontaktuj się z nami, odpowiemy najszybciej jak to możliwe!</p>
+                        <form id="contact-form" class="styled-form" method="post" action="send.php">
 
     <!-- 🔒 honeypot -->
     <input type="text" name="website" style="display:none">
@@ -172,27 +167,29 @@
     <button type="submit" class="btn-submit">WYŚLIJ WIADOMOŚĆ</button>
     <div id="form-message" class="form-message"></div>
 </form>
+                    </div>
                 </div>
                 <div class="contact-details" data-aos-custom="fade-left">
-                    <h3>DANE KONTAKTOWE</h3>
+                    <h2>DANE KONTAKTOWE</h2>
+                    <p style="margin-bottom: 20px;">Działamy na terenie całej Częstochowy oraz w promieniu do 50km od miasta. Nasz <a href="skup-samochodow-czestochowa-gotowka.html">skup aut</a> oraz <a href="pomoc-drogowa-laweta-czestochowa-24h.html">pomoc drogowa</a> są dostępne przez całą dobę.</p>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Siedziba firmy:</h4>
+                            <h3>Siedziba firmy:</h3>
                             <p>Częstochowa, Śląskie i okolice</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
                         <div>
-                            <h4>Skup Samochodów (24h):</h4>
+                            <h3>Skup Samochodów (24h):</h3>
                             <p>730 035 559</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
                         <div>
-                            <h4>Pomoc Drogowa (24h):</h4>
+                            <h3>Pomoc Drogowa (24h):</h3>
                             <p>790 676 446</p>
                         </div>
                     </div>
@@ -224,11 +221,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 DAWDAN-CARS. Wszelkie prawa zastrzeżone</p>
+                <p>&copy; 2025 DAWDAN-CARS. Wszelkie prawa zastrzeżone</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
